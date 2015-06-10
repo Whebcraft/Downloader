@@ -5,7 +5,9 @@ The plugin can start and stop a file download from the web.
 ## Adding the plugin to your project ##
 
 1. To install the plugin,
-Use the following command to always use the latest version of the plugin: cordova plugin add https://github.com/whebcraft/downloader
+Use the following command to always use the latest version of the plugin: cordova plugin add 
+
+https://github.com/Whebcraft/Downloader.git
 
 ## Using the plugin ##
 
