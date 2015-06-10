@@ -1,0 +1,33 @@
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.apache.cordova.plugins.DownloadManager.DownloadManager"
+    version="1.0.0">
+
+    <name>DownloadManager</name>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <description>The plugin can start and stop a file download from the web (HTTP)</description>
+    <author>Whebcraft - whebcraft@gmail.com</author>
+    <keywords></keywords>
+
+    <license>CC4.0NCAttrib</license>
+
+    <js-module src="www/DownloadManager.js" name="DownloadManager">
+        <clobbers target="downloadmanager" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+          <feature name="DownloadManager" >
+            <param name="DownloadManager" value="org.apache.cordova.plugins.DownloadManager.DownloadManager"/>  
+          </feature>
+        </config-file>
+        <source-file src="src/android/DownloadManager.java" target-dir="src/com/org/apache/cordova/plugins/DownloadManager/DownloadManager" />
+        <source-file src="src/android/DownloadControllerSingleton.java" target-dir="src/com/org/apache/cordova/plugins/DownloadManager/DownloadManager" />
+        <source-file src="src/android/Downloader.java" target-dir="src/com/org/apache/cordova/plugins/DownloadManager/DownloadManager" />
+    </platform>
+</plugin>
